@@ -11,6 +11,8 @@ import android.widget.Toast;
 import com.google.android.material.button.MaterialButton;
 import com.google.gson.Gson;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         productList.add(new Product("Ladies Pants","120"));
 
         String json = new Gson().toJson(productList);
+
 
 
         apiService = ApiClient.getRetrofit().create(ApiService.class);
